@@ -1,19 +1,20 @@
-package ver2;
+package ver2.model;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 import lombok.ToString;
 
-@Getter
-@Setter
+// DTO 기능은 단지 데이터만 담을 역할을 하는 것이 아니다.
+// 기능도 추가 가능하다.
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @ToString
 public class StudentDTO {
 
-	// 학생 정보
 	private int id;
 	private String name;
 	private int age;

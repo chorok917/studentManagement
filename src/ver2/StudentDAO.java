@@ -33,7 +33,7 @@ public class StudentDAO implements StudentDAOImpl {
 		// tip - List라면 무조건 리스트를 생성하고 코드 작성하세요!!
 		List<StudentDTO> list = new ArrayList<>(); // 다른 거 들어와도 되지만 가장 만만한 ArrayList
 
-		String query = "  SELECT * FROM students WHERE id = ?  ";
+		String query = "  SELECT * FROM students   ";
 
 		try (Connection conn = DBConnectionManager.getInstance().getConnection()) {
 			PreparedStatement pstmt = conn.prepareStatement(query);
